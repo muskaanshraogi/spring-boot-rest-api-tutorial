@@ -13,10 +13,11 @@ pipeline {
             }
         }
         stage('Deployment') {
+            when {
+                expression { env.BRANCH_NAME == 'main' }
+            }
             steps {
-                if(env.BRANCH_NAME == 'main') {
-                    echo "Deploying"
-                }
+                echo "Deploying"
             }
         }
     }
