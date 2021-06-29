@@ -12,9 +12,9 @@ pipeline {
                 echo "Testing"
             }
         }
-        if(env.BRANCH_NAME == 'main') {
-            stage('Deployment') {
-                steps {
+        stage('Deployment') {
+            steps {
+                if(env.BRANCH_NAME == 'main') {
                     echo "Deploying"
                 }
             }
