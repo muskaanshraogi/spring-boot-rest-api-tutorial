@@ -12,9 +12,10 @@ pipeline {
                 sh "mvn package -DskipTests"
             }
         }
-        stage('Testing') {
+        stage('BDD Test') {
             steps {
                 echo "Testing"
+                sh "mvn test clean"
             }
         }
         stage('Deployment') {
