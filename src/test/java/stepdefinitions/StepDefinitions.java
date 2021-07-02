@@ -14,7 +14,7 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
  
 public class StepDefinitions {
-    private static final String BASE_URL = "http://localhost:8081";
+    private static final String BASE_URL = "http://localhost:8081/";
     
     private static String token;
     private static Response response;
@@ -66,7 +66,7 @@ public class StepDefinitions {
         .post("/api/v1/users");
     }
     
-    @Then("User profile should be createds")
+    @Then("User profile should be created")
     public void user_profile_should_be_created() {
         Assert.assertNotNull(response.getBody());
     }

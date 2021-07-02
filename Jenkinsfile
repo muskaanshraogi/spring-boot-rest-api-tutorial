@@ -15,7 +15,7 @@ pipeline {
         stage('BDD Test') {
             steps {
                 echo "Testing"
-                sh "mvn test clean"
+                sh "mvn test"
             }
         }
         stage('Deployment') {
