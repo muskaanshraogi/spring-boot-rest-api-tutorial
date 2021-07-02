@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Run') {
             steps {
-                sh "java -jar target/spring-boot-rest-api-tutorial-0.0.1-SNAPSHOT.jar"
+                sh "java -jar target/spring-boot-rest-api-tutorial-0.0.1-SNAPSHOT.jar &"
                 echo "Project up on localhost"
             }
         }
