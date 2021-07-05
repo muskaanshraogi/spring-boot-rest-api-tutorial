@@ -23,19 +23,19 @@ pipeline {
                 echo "Testing"
                 bat "mvn test"
             }
-        }
-        stage('Generate HTML report') {
-            steps {
-                 cucumber buildStatus: 'UNSTABLE',
-                    reportTitle: 'My report',
-                    fileIncludePattern: '**/*.json',
-                    trendsLimit: 10,
-                    classifications: [
-                        [
-                            'key': 'Browser',
-                            'value': 'Firefox'
+            post {
+                always {
+                    cucumber buildStatus: 'UNSTABLE',
+                        reportTitle: 'My report',
+                        fileIncludePattern: '**/*.json',
+                        trendsLimit: 10,
+                        classifications: [
+                            [
+                                'key': 'Browser',
+                                'value': 'Firefox'
+                            ]
                         ]
-                    ]
+                }
             }
         }
         stage('Deployment') {
