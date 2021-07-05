@@ -22,6 +22,7 @@ pipeline {
             steps {
                 echo "Testing"
                 bat "mvn test"
+                echo "Test finished"
             }
         }
         stage('Deployment') {
