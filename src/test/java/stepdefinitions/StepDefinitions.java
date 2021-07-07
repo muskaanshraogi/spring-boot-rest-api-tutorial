@@ -68,8 +68,8 @@ public class StepDefinitions {
     
     @Then("User profile should be created")
     public void user_profile_should_be_created() {
-        //Assert.assertNotNull(response.getBody());
-        Assert.assertNotNull(null);
+        Assert.assertNotNull(response.getBody());
+        //Assert.assertNotNull(null);
     }
     
     @When("User requests data")
