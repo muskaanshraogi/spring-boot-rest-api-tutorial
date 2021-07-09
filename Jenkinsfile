@@ -50,4 +50,4 @@
 // }
 
 @Library('jenkins-shared-pipeline') _ 
-genericJenkinsFile(buildMode:"mvn", jira_issue:"CICD-20")
+genericJenkinsFile(buildMode:"mvn")
