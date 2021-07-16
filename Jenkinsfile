@@ -50,4 +50,4 @@
 // }
 
 @Library('jenkins-shared-pipeline') _ 
-genericJenkinsFile(buildMode:"mvn")
+genericJenkinsFile(buildMode:"mvn", issueKey: "CICD")
