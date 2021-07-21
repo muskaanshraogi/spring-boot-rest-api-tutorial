@@ -84,6 +84,6 @@ public class StepDefinitions {
     
     @Then("All users are displayed")
     public void all_users_are_displayed() {
-        Assert.assertNotNull(response.getBody());
+        Assert.assertNotNull(null);
     }
 }
