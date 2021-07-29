@@ -86,4 +86,6 @@ public class StepDefinitions {
     public void all_users_are_displayed() {
         Assert.assertNotNull(null);
     }
+
+    //Issue in commit message
 }
