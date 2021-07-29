@@ -1,2 +1,3 @@
 @Library('jenkins-shared-pipeline') _ 
-genericJenkinsFile(buildMode:"mvn", issueKey: "CICD") //
+genericJenkinsFile(issueKey: "CICD", addHTMLReportToJira: true)
+//issueKey should be set according to JIRA issue key
